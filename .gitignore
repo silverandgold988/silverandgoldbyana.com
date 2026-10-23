@@ -1,0 +1,7 @@
+sync/.env
+sync/.tokens.json
+sync/.state.json
+sync/__pycache__/
+_tmp/
+_tmp_borrar/
+.DS_Store

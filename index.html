@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silver &amp; Gold by Ana · Lentes, gorras y moda deportiva</title>
+<meta name="description" content="Catálogo de Silver & Gold by Ana: lentes de sol, gorras bordadas, sets deportivos Alo y sneakers. Pide por WhatsApp.">
+<meta property="og:title" content="Silver & Gold by Ana">
+<meta property="og:description" content="Detalles que enamoran. Lentes, gorras y moda deportiva. Pide por WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <span><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg> Envíos a todo el país</span>
+  <span><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg> Compra segura por WhatsApp</span>
+  <span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg> Atención personalizada</span>
+</div>
+
+<header class="nav" id="top">
+  <button class="nav-burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <nav class="nav-links" id="navLinks">
+    <a href="#top">Inicio</a>
+    <a href="#catalogos">Catálogos</a>
+    <a href="#como-comprar">Cómo comprar</a>
+    <a href="#nosotros">Nosotros</a>
+  </nav>
+  <a class="brand" href="#top">
+    <span class="brand-mark">A</span>
+    <span class="brand-name">Silver <em>and</em> Gold</span>
+    <span class="brand-sub">by Ana</span>
+  </a>
+  <div class="nav-actions">
+    <a class="icon-btn" href="https://instagram.com/silverandgoldbyana" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+    <a class="icon-btn wa" id="navWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2 3.8 4.2 4.4l1.2-1.1 1.6.8c-.3 1.3-1.3 1.7-2.4 1.5-2.6-.5-5-2.9-5.5-5.5-.2-1.1.2-2.1 1.5-2.4l.8 1.6z" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Tu estilo, nuestra inspiración</p>
+    <h1>Lentes y gorras <span class="script">que te hacen brillar</span></h1>
+    <p class="lead">Lentes de sol, gorras bordadas y moda deportiva seleccionada con mucho amor. Porque cada detalle cuenta.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#catalogos">Ver catálogos →</a>
+      <a class="btn btn-ghost" id="heroWa" href="#" target="_blank" rel="noopener">Escríbenos</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="hero-card c1"><img id="heroImg1" alt=""></div>
+    <div class="hero-card c2"><img id="heroImg2" alt=""></div>
+    <div class="hero-card c3"><img id="heroImg3" alt=""></div>
+    <svg class="leaf leaf-a" viewBox="0 0 120 200"><path d="M60 195C20 150 10 90 60 5c50 85 40 145 0 190z"/><path d="M60 10v185M60 60c-15 10-25 25-30 45M60 60c15 10 25 25 30 45M60 110c-15 10-25 25-30 45M60 110c15 10 25 25 30 45"/></svg>
+  </div>
+</section>
+
+<section class="categories" id="categorias" aria-label="Categorías">
+  <!-- filled by JS -->
+</section>
+
+<main id="catalogos" class="catalogs">
+  <div class="section-head">
+    <p class="eyebrow">Catálogos</p>
+    <h2>Nuestra colección</h2>
+    <p class="muted" id="updatedLabel"></p>
+  </div>
+  <div id="catalogList"></div>
+</main>
+
+<section class="howto" id="como-comprar">
+  <div class="section-head">
+    <p class="eyebrow">Cómo comprar</p>
+    <h2>Pedir es muy fácil</h2>
+  </div>
+  <div class="steps">
+    <div class="step"><span class="num">1</span><h3>Mira el catálogo</h3><p>Abre cualquier página y amplíala para ver los detalles.</p></div>
+    <div class="step"><span class="num">2</span><h3>Anota el número</h3><p>Cada modelo tiene su número debajo de la foto.</p></div>
+    <div class="step"><span class="num">3</span><h3>Escríbenos</h3><p>Mándanos el número por WhatsApp y te confirmamos disponibilidad, precio y envío.</p></div>
+  </div>
+  <div class="center"><a class="btn" id="howWa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp →</a></div>
+</section>
+
+<section class="story" id="nosotros">
+  <div class="story-art" aria-hidden="true">
+    <div class="story-frame"><img id="storyImg" alt=""></div>
+    <p class="script big">Detalles que enamoran ♡</p>
+  </div>
+  <div class="story-copy">
+    <h2>Nuestra historia</h2>
+    <p>En Silver &amp; Gold by Ana creemos que la moda es más que ropa y accesorios: es una forma de expresar quién eres. Cada pieza de nuestra colección ha sido seleccionada con mucho amor, pensando en la mujer moderna, auténtica y segura de sí misma.</p>
+    <p class="muted">Gracias por apoyar mi pequeño negocio ♡</p>
+    <a class="btn btn-ghost" href="https://instagram.com/silverandgoldbyana" target="_blank" rel="noopener">Síguenos en Instagram</a>
+  </div>
+</section>
+
+<section class="perks">
+  <div><svg viewBox="0 0 24 24"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg><span>Envíos rápidos y seguros</span></div>
+  <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/></svg><span>Compra 100% segura</span></div>
+  <div><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><path d="M18 3v4h-4M6 21v-4h4"/></svg><span>Cambios fáciles</span></div>
+  <div><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><span>Atención personalizada</span></div>
+</section>
+
+<footer class="footer">
+  <div class="foot-brand">
+    <span class="brand-mark">A</span>
+    <span class="brand-name">Silver <em>and</em> Gold</span>
+    <span class="brand-sub">by Ana</span>
+    <div class="socials">
+      <a href="https://instagram.com/silverandgoldbyana" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a id="footWa" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2 3.8 4.2 4.4l1.2-1.1 1.6.8c-.3 1.3-1.3 1.7-2.4 1.5-2.6-.5-5-2.9-5.5-5.5-.2-1.1.2-2.1 1.5-2.4l.8 1.6z" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <div class="foot-col">
+    <h4>Contacto</h4>
+    <a href="tel:+14076248594">+1 (407) 624-8594</a>
+    <a href="tel:+12105288577">+1 (210) 528-8577</a>
+    <a href="mailto:Anabasabe242@hotmail.com">Anabasabe242@hotmail.com</a>
+  </div>
+  <div class="foot-col">
+    <h4>Explora</h4>
+    <a href="#catalogos">Catálogos</a>
+    <a href="#como-comprar">Cómo comprar</a>
+    <a href="#nosotros">Nosotros</a>
+  </div>
+  <div class="foot-col script-col">
+    <p class="script">Tu estilo,<br>nuestra pasión ♡</p>
+  </div>
+  <p class="copy">© <span id="year"></span> Silver &amp; Gold by Ana. Todos los derechos reservados.</p>
+</footer>
+
+<a class="wa-float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2 3.8 4.2 4.4l1.2-1.1 1.6.8c-.3 1.3-1.3 1.7-2.4 1.5-2.6-.5-5-2.9-5.5-5.5-.2-1.1.2-2.1 1.5-2.4l.8 1.6z" fill="currentColor" stroke="none"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <figure class="lb-fig">
+    <img id="lbImg" alt="">
+    <figcaption>
+      <span id="lbCaption"></span>
+      <a class="btn btn-sm" id="lbWa" href="#" target="_blank" rel="noopener">Pedir de esta página</a>
+    </figcaption>
+  </figure>
+  <button class="lb-nav next" id="lbNext" aria-label="Siguiente">›</button>
+</div>
+
+<script src="catalog/manifest.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
