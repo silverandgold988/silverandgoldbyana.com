@@ -1,0 +1,7 @@
+catalog/
+sync/
+node_modules/
+.git/
+.gitignore
+.nojekyll
+package-lock.json

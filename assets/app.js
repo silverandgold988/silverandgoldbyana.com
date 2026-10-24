@@ -31,8 +31,8 @@
     return cat.skip_first_page ? cat.pages.slice(1) : cat.pages;
   }
 
-  function src(p) { return 'catalog/' + p + (manifest.updated ? '?v=' + encodeURIComponent(manifest.updated) : ''); }
-  function thumb(cat, p) { return cat.thumbs ? src(p.replace(/^([^/]+)\//, '$1/thumbs/')) : src(p); }
+  function src(p) { return 'catalog/' + p; }
+  function thumb(cat, p) { return cat.thumbs ? src(p.replace(/\/([^/]+)$/, '/thumbs/$1')) : src(p); }
 
   function buildCategories(cats) {
     const wrap = $('#categorias');

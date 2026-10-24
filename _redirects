@@ -1,0 +1,2 @@
+https://www.silverandgoldbyana.com/* https://silverandgoldbyana.com/:splat 301!
+/catalog/*  /.netlify/functions/catalog/:splat  200!
