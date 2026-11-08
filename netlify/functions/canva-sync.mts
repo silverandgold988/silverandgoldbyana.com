@@ -105,8 +105,19 @@ async function finalize(job: Job, cat: CatalogDef, total: number) {
   const store = sync();
   const imgs = catalog();
   const manifest = (await imgs.get("manifest.json", { type: "json" })) as any;
-  const entry = manifest.catalogs.find((c: any) => c.id === cat.id);
-  if (!entry) throw new Error(`catálogo ${cat.id} no está en el manifest`);
+  let entry = manifest.catalogs.find((c: any) => c.id === cat.id);
+  if (!entry) {
+    // Catálogo nuevo: se crea su entrada con los datos de presentación de CATALOGS,
+    // en la misma posición en que está definido allí.
+    entry = {
+      id: cat.id, title: cat.title, subtitle: cat.subtitle, note: cat.note, price: cat.price,
+      canva_design_id: cat.canva_design_id, orientation: cat.orientation, skip_first_page: cat.skip_first_page,
+    };
+    manifest.catalogs.push(entry);
+    const order = (id: string) => CATALOGS.findIndex(c => c.id === id);
+    manifest.catalogs.sort((a: any, b: any) => order(a.id) - order(b.id));
+    log(`[${cat.id}] catálogo nuevo: entrada creada en el manifest`);
+  }
   entry.pages = Array.from({ length: total }, (_, i) => `${cat.id}/${job.version}/page-${String(i + 1).padStart(2, "0")}.jpg`);
   entry.thumbs = true;
   manifest.updated = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");

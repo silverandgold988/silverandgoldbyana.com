@@ -28,9 +28,13 @@ crontab -e
 
 ## Agregar un catálogo nuevo
 
-Edita `sync/config.json` y añade otro bloque con el `canva_design_id`
-(el ID que aparece en la URL del diseño, empieza por `D`). Comparte el diseño
-con la cuenta que autorizó la integración. La próxima sincronización lo crea.
+Con el hosting actual (Netlify): añade el catálogo a `CATALOGS` en
+`netlify/functions/_lib.mts` con su `canva_design_id` (el ID que aparece en la
+URL del diseño, empieza por `D`), título, subtítulo, nota y orientación, y
+despliega. La función programada lo exporta y lo publica sola en unos minutos.
+El diseño debe ser visible para la cuenta de Canva que autorizó la integración.
+
+Si usas este script (hosting por FTP), añade el mismo bloque en `sync/config.json`.
 
 ## Archivos
 

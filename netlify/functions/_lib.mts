@@ -8,12 +8,31 @@ export interface CatalogDef {
   canva_design_id: string;
   export_width: number;
   thumb_width: number;
+  // Datos de presentación: se usan para crear la entrada del manifest la primera vez
+  // que se publica un catálogo nuevo (los catálogos ya publicados conservan su texto).
+  title: string;
+  subtitle?: string;
+  note?: string;
+  price?: string;
+  orientation: "portrait" | "landscape";
+  skip_first_page?: boolean;
 }
 
+// Para agregar un catálogo nuevo basta con añadirlo aquí (ID del diseño de Canva, el que
+// empieza por "D") y desplegar: la sincronización programada lo exporta y lo publica sola.
 export const CATALOGS: CatalogDef[] = [
-  { id: "lentes", canva_design_id: "DAHYqsMGZUE", export_width: 1200, thumb_width: 620 },
-  { id: "gorras", canva_design_id: "DAHYqj18Am0", export_width: 1200, thumb_width: 620 },
-  { id: "alo",    canva_design_id: "DAHYqt2xU-E", export_width: 1600, thumb_width: 620 },
+  { id: "lentes", canva_design_id: "DAHYqsMGZUE", export_width: 1200, thumb_width: 620,
+    title: "Lentes", subtitle: "Más de 100 modelos de lentes de sol",
+    note: "Cada modelo tiene su número. Escríbenos con el número para pedirlo.", orientation: "portrait" },
+  { id: "gorras", canva_design_id: "DAHYqj18Am0", export_width: 1200, thumb_width: 620,
+    title: "Gorras", subtitle: "Gorras bordadas con frases", price: "$25 c/u",
+    note: "72 diseños numerados. Escríbenos con el número para pedirla.", orientation: "portrait" },
+  { id: "alo", canva_design_id: "DAHYqt2xU-E", export_width: 1600, thumb_width: 620,
+    title: "Alo", subtitle: "Sets deportivos, gorras, viseras, headbands y sneakers",
+    note: "Pregúntanos por tallas y colores disponibles.", orientation: "landscape", skip_first_page: true },
+  { id: "sweaters", canva_design_id: "DAHaR_O95zg", export_width: 1600, thumb_width: 620,
+    title: "Sweaters y Franelas", subtitle: "Sweaters y franelas con frases",
+    note: "Pregúntanos por tallas y colores disponibles.", orientation: "landscape", skip_first_page: true },
 ];
 
 export const sync = () => getStore({ name: "canva-sync", consistency: "strong" });

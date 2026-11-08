@@ -36,6 +36,16 @@
       "orientation": "landscape",
       "skip_first_page": true,
       "export_width": 1600
+    },
+    {
+      "id": "sweaters",
+      "title": "Sweaters y Franelas",
+      "subtitle": "Sweaters y franelas con frases",
+      "note": "Pregúntanos por tallas y colores disponibles.",
+      "canva_design_id": "DAHaR_O95zg",
+      "orientation": "landscape",
+      "skip_first_page": true,
+      "export_width": 1600
     }
   ]
 }
